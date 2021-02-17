@@ -1,0 +1,31 @@
+header{
+    background-color: red;
+}
+header,footer{
+    text-align: center;
+}
+
+main{
+    
+
+}
+.grid-container{
+    display:grid;
+    justify-content: center;
+
+    grid-template-columns: 12em 8em;
+    grid-template-rows: auto;
+    align-items: center;
+
+    gap:5px;
+    
+}
+
+.grid-container button{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.grid-label{
+    justify-self: end;
+}

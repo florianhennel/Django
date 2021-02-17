@@ -5,14 +5,23 @@ from django.shortcuts import render
 from .models import Tanulo, Valasztas, Foglalkozas
 
 def home_view(request, *args, **kwargs):
+	
+	tanulok = Tanulo.objects.all()
 
-    tanulok= Tanulo.objects.all()
-    kontextus = {
-    "a": 123,
-    "b": "blablabla",
-    "l": [1,3,5,7,9],
-    "tanulo" : tanulok,
-    }
+	kontextus = {
+		"a": 323,
+		"b": "blablabla",
+		"l": [1,3,5,7,9,300,123,123],
+		"tanulok": tanulok,
+	}
 
-    print(f"a kontextusban az a értéke: {kontextus['a']}")
-    return render(request, "home.html", kontextus) 
+
+	print(f"A kontextusban az a értéke: {kontextus['a']}")
+
+
+	return render(request, "home.html", kontextus) 
+
+def tesijel(request):
+
+    return render(request, "tesi.html")
+

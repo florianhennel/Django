@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        Mindennapos testnevelésre való jelentkezés űrlapja
+
+    </header>
+    <main>
+      <form action="">
+          <div class="grid-container">
+            <label for="fnev" class="grid-label">Felhasználónév:</label>
+            <input type="text" name="" id="fnev">
+            <label for="jelszo" class="grid-label">Jelszó:</label>
+            <input type="password" name="" id="jelszo">
+            <label for="valasztas" class="grid-label">Választott foglalkozás:</label>
+            <select name="" id="valasztas">
+                <option>Kosárlabda</option>
+                <option>Gyeplabda</option>
+                <option>Foci</option>
+            </select>
+            <button>Küldés</button>
+        </div>
+      </form>  
+    </main>
+    <footer>
+        2020 szent lászló gimnázium
+    </footer>
+</body>
+</html>
